@@ -1,120 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book Your Stay - Family suite, Luxury Single Room, Standard Suite </title>
+    <link rel="stylesheet" href="css/paypal-booking.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <br><br>
+    <form action="https://formspree.io/xpzzjwga" method="POST" class="booking-form">
+      <input type="hidden" name="_next" value="https://nabetuaful.com/"/>
+      <input type="text" name="_gotcha" style="display:none">
 
-	<title>Booking Form: Monte Carlo Saadiyat Grand Hotel</title>
+      <!-- WARNING: STEP ONE: ROOM DETAILS -->
+        <div class="steps" id="step-1">
+          <div class="title">
+            <span> <i class="fa fa-bed"></i> <span class="name-of-title">Step 1: Room details</span> </span>
+          </div>
 
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+            <label>
+              <b> <i>*</i>  First name:</b>
+              <br>
+              <span class="more-users-name-option options">Please give us the name of one of the people staying in this room</span>
+              <input type="text" name="firstname" class="name-first">
+            </label>
 
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+            <label>
+              <b><i>*</i> Last name:</b>
+              <br>
 
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+              <input type="text" name="lastname" class="name-last">
+            </label>
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+            <label>
+              <b>Any Special Request:</b>
+              <br>
 
-</head>
+              <textarea name="message" rows="5" cols="80" class="special-request-txt"></textarea>
+            </label>
 
-<body>
-	<div id="booking" class="section">
-		<div class="section-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-7 col-md-push-5">
-						<div class="booking-cta">
-							<h1>Make your reservation</h1>
-							<p>
-								We are happy to have you on-board.
-							</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-md-pull-7">
-						<script type="text/javascript">var submitted=false;</script>
-						    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-						    onload="if(submitted) {window.location='thankyou.htm';}"></iframe>
-						<div class="booking-form">
-							<form class="form-1" target="hidden_iframe" onsubmit="submitted=true">
-								<div class="form-group">
-									<span class="form-label">Client Information</span>
-									<input class="form-control" type="text" placeholder="Enter Your Name*" class="required_form" required>
-									<input class="form-control" type="email" placeholder="Enter Your Email*" class="required_form"  required>
-									<input class="form-control" type="number" placeholder="Contact Number*" class="required_form" required>
-								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Check In</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Check out</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Rooms</span>
-											<select class="form-control">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Adults</span>
-											<select class="form-control">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Children</span>
-											<select class="form-control">
-												<option>0</option>
-												<option>1</option>
-												<option>2</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-								</div>
-								<div class="form-btn">
-									<button class="submit-btn booking-btn">Book</button>
-								</div>
-							</form>
+            <label>
+              <b> <i>*</i> Check-in date:</b>
+              <br>
+              <input type="date" name="Check-in-date" required>
+            </label>
+            <label>
+              <b> <i>*</i> Check-out date:</b>
+              <br>
+              <input type="date" name="Check-in-date" required>
+            </label>
+        </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <!-- WARNING: STEP 2 personal details -->
+        <div class="steps" id="step-2">
+          <div class="title">
+            <span> <i class="fa fa-user"></i> <span class="name-of-title">Step 2: Personal details</span> </span>
+          </div>
+          <label>
+            <b><i>*</i> Your email:</b>
+            <input type="email" name="_replyto" class="email">
+          </label>
 
-	<
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+          <label>
+            <b><i>*</i> Mobile number:</b>
+            <br>
+            <span class="options">We'll only contact you in an emergency</span>
+            <input type="tel" name="Contact" class="mobilenumber">
+          </label>
 
+        </div>
+
+        <!-- WARNING: STEP 3 Payment method -->
+        <div class="steps" id="step-3">
+          <div class="title">
+            <span> <i class="fa fa-user"></i> <span class="name-of-title">Step 3: Payment method</span> </span>
+          </div>
+          <div class="paypal-logo">
+            <img src="images/paypal.png" alt="Book with paypal">
+            <span> <i class="fa fa-paypal"></i> <span class="name-of-title">Paypal</span> </span>
+          </div>
+        </div>
+
+        <!-- WARNING: STEP 4 Cancellation Policy -->
+        <div class="steps" id="step-3">
+          <div class="title">
+            <span> <i class="fa fa-cross"></i> <span class="name-of-title">Step 4: Cancellation Policy</span> </span>
+          </div>
+          <div class="cancellation-policy">
+            This rate is refundable and can be changed or cancelled.
+          </div>
+          <hr>
+
+          <div class="user-data">
+            <br>
+            <p class="no-blank"></p>
+            <div class="button-box">
+              <a class="confirmation-a" onclick="confirmInputs()"> Book <i class="fa fa-spinner fa-spin"></i> </a>
+              <button type="submit"  class="booking-submit">Confirm</button>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+        <input type="hidden" name="_next" value="https://mysite.com/thanks.html"/>
+
+    </form>
+
+
+
+  <script type="text/javascript" src="js/paypal-booking.js">
+
+  </script>
+  </body>
 </html>

@@ -1,122 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Monte Carlo Saadiyat | Bookings</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/form-payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
 
-	<title>Booking Form: Monte Carlo Saadiyat Grand Hotel</title>
+    <br><br>
+    <div class="form-payment">
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+      onload="if(submitted) {window.location='thankyou.htm';}"></iframe>
+      <form class="payment-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfy6Z6-yYshqY4EKjyjMLhKoOFFvkAccEF0PeBctfoZd_KU7A/formResponse" target="hidden_iframe" onsubmit="submitted=true;" method="post">
+        <div class="title" id="click-on-a-room">
+          Click on the room you want to book
+        </div>
+        <div class="room-details-section">
 
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+          <div class="rooms-slider">
+            <div class="box" id="deluxe-room" onclick="deluxeRoom()">
+              <img src="img/deluxe.jpg" alt="deluxe">
+              <i class="fa fa-check correct"></i>
+              <i class="room-name">
+                Deluxe:
+                $290.00
+              </i>
+            </div>
 
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+            <div class="box" id="executive-room" onclick="executiveRoom()">
+              <img src="img/executive.jpg" alt="executive">
+              <i class="fa fa-check correct"></i>
+              <i class="room-name">
+                Executive:
+                $400.00
+              </i>
+            </div>
 
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+            <div class="box" id="deluxeSuite-room" onclick="deluxeSuiteRoom()">
+              <img src="img/deluxeSuite.jpg" alt="deluxeSuite">
+              <i class="fa fa-check correct"></i>
+              <i class="room-name">
+                Deluxe Suite:
+                $350.00
+              </i>
+            </div>
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+            <div class="box" id="executiveSuite-room" onclick="executiveSuiteRoom()">
+              <img src="img/executiveSuite.jpg" alt="executiveSuite">
+              <i class="fa fa-check correct"></i>
+              <i class="room-name">
+                Executive Suite:
+                $450.00
+              </i>
+            </div>
 
-</head>
+            <div class="box" id="presidentialSuite-room" onclick="presidentialSuiteRoom()">
+              <img src="img/presidentialSuite.jpg" alt="presidentialSuite">
+              <i class="fa fa-check correct"></i>
+              <i class="room-name">
+                Presidential Suite:
+                $400.00
+              </i>
+            </div>
+          </div>
+          <input type="checkbox" name="room_selected" id="room_selected">
+          Try me
+        </div>
+        <input type="hidden" name="entry.1705518865"  id="how_many_adults_google">
+        <input type="hidden" name="entry.2133960596"  id="how_many_children_google">
+        <input type="hidden" name="entry.769332286"   id="amount_charged_google">
+        <br><br>
+        <div class="client-info-section">
+          <div class="box-2" id="first-box-2">
+            <span class="box-title">Room Information</span>
 
-<body>
-	<div id="booking" class="section">
-		<div class="section-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-7 col-md-push-5">
-						<div class="booking-cta">
-							<h1>Make your reservation</h1>
-							<p>
-								We are happy to have you on-board.
-							</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-md-pull-7">
-						<script type="text/javascript">var submitted=false;</script>
-						    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-						    onload="if(submitted) {window.location='thankyou.htm';}"></iframe>
-						<div class="booking-form">
-							<form class="form-1" target="hidden_iframe" onsubmit="submitted=true">
-								<div class="form-group">
-									<span class="form-label">Client Information</span>
-									<input class="form-control" type="text" placeholder="Enter Your Name*" class="required_form" required>
-									<br>
-									<input class="form-control" type="email" placeholder="Enter Your Email*" class="required_form"  required>
-									<br>
-									<input class="form-control" type="number" placeholder="Contact Number*" class="required_form" required>
-								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Check In</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Check out</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Rooms</span>
-											<select class="form-control">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Adults</span>
-											<select class="form-control">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Children</span>
-											<select class="form-control">
-												<option>0</option>
-												<option>1</option>
-												<option>2</option>
-											</select>
-											<span class="select-arrow"></span>
-										</div>
-									</div>
-								</div>
-								<div class="form-btn">
-									<button class="submit-btn booking-btn">Book</button>
-								</div>
-							</form>
+            <div class="form-group nb-inline">
+              <label>How many adults?</label>
+              <select class="number_of_adults" name="number_of_adults">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="form-group nb-inline">
+              <label>How many children?</label>
+              <select class="number_of_children" name="number_of_children">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="form-group">
+              <label>Any special request?</label>
+              <textarea name="entry.603655863" rows="5" cols="80" class="special_request"></textarea>
+            </div>
+          </div>
 
-	<
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+          <div class="box-2" id="personal-info-box">
+            <span class="box-title">Personal Information</span>
+            <div class="form-group">
+              <label><i>*</i>Name of person you are booking for</label>
+              <input type="text" name="entry.1832793149" placeholder="Name" id="name_of_person">
+              <span class="error" id="error-name"></span>
+            </div>
+            <br><br>
+            <div class="form-group">
+              <label><i>*</i>Email address</label>
+              <input type="text" name="entry.226932620" placeholder="Email" id="email_of_person">
+              <span class="error" id="error-email"></span>
+            </div>
+            <br><br>
+            <div class="form-group">
+              <label><i></i>Contact number</label>
+              <input type="tel" name="entry.1255423652" id="contact_of_person">
+            </div>
+          </div>
 
+          <div class="box-2" id="payment-method">
+            <span class="box-title">Payment Method</span>
+            <img src="img/paypal.png" alt="ppaypal">
+          </div>
+        </div>
+
+        <div class="amount-details-section" style="background: url(img/executive.jpg); background-repeat: no-repeat; background-size: cover;">
+          <span class="tint">
+            <div class="payment-box">
+              <span class="payment-title">
+                Pay this amount
+              </span>
+              <br><br>
+              <p class="amount-txt" id="amount-txt"> <i class="fa fa-dollar"></i> </p>
+              <a class="confirm-btn nb-btn" onclick="confirmInputs()">Confirm <i class="fa fa-spinner fa-spin"></i> </a>
+              <input type="submit" class="nb-btn submit-btn" value="Book">
+            </div>
+          </span>
+        </div>
+
+      </form>
+    </div>
+
+    <script type="text/javascript" src="js/form-payment.js">
+    </script>
+  </body>
 </html>
